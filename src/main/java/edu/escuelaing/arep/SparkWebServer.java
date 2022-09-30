@@ -12,6 +12,7 @@ public class SparkWebServer
         get("hello", (req,res) -> "Hello Docker!");
         post("/message", (req,res) -> insertMessage(req,res));
         get("ronaldo", (req,res) -> "Ronaldo");
+        get("/messages", (req,res) -> getMessages(req,res));
 
     }
 
