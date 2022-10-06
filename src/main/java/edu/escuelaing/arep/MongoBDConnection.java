@@ -36,19 +36,20 @@ public class MongoBDConnection {
     public void insertMessage(String message){
         MongoCollection<Document> collection = database.getCollection("messages");
         Document document = new Document();
+        System.out.println(message);
         document.append("mensaje",message);
         document.append("fecha", new Date().toString());
         collection.insertOne(document);
     }
 
     public String getData(){
-        MongoCollection<Document> collection = database.getCollection("Messages");
+        MongoCollection<Document> collection = database.getCollection("messages");
         String message = "";
         FindIterable<Document> iterable = collection.find();
         for (Document document: iterable) {
             message += "<tr><td>" + document.get("mensaje").toString() + "</td><td>" + document.get("fecha").toString() + "</td></tr>";
         }
-        System.out.println(message);
+        //System.out.println(message);
         return message;
     }
 }

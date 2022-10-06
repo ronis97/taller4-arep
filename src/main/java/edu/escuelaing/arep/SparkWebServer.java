@@ -1,5 +1,6 @@
 package edu.escuelaing.arep;
 
+import org.json.JSONObject;
 import spark.Request;
 import spark.Response;
 
@@ -8,6 +9,7 @@ public class SparkWebServer
 {
     private static MongoBDConnection mongoConnection = new MongoBDConnection();
     public static void main(String... args){
+        staticFileLocation("/public");
         port(getPort());
         get("hello", (req,res) -> "Hello Docker!");
         post("/message", (req,res) -> insertMessage(req,res));
@@ -23,7 +25,8 @@ public class SparkWebServer
         return 4567;
     }
     private static String insertMessage(spark.Request request, spark.Response response){
-        mongoConnection.insertMessage(request.body());
+
+        mongoConnection.insertMessage(request.queryParams("mensaje"));
         String content = getMessages(request,response);
         return content;
     }
