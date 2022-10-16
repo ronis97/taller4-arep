@@ -127,7 +127,7 @@ Para descargar los contenedores y instalarlos en una maquina EC2, primero debere
 EC2, crear un certificado y iniciar sesion mediante el protocolo ssh en una terminal, si su sistema operativo
 es Windows se recomienda el uso de una terminal Linux descargada, para este caso se utilizara el mismo GitBash.
 
-![image]()
+![image](https://github.com/ronis97/taller4-arep/blob/main/img/ec2%20instance%20image.PNG)
 
 Procederemos a actualizar el sistema mediante el comando
 
@@ -172,5 +172,6 @@ La maquina estara apagada por efectos de costos.
 
 La prueba funcionando:
 
-![]()
+![](https://github.com/ronis97/taller4-arep/blob/main/img/ec2%20instance.PNG)
 
+### Autor: Edgar Ronaldo Henao Villarreal
