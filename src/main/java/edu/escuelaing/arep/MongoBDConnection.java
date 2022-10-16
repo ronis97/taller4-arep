@@ -47,7 +47,12 @@ public class MongoBDConnection {
         String message = "";
         FindIterable<Document> iterable = collection.find();
         for (Document document: iterable) {
-            message += "<tr><td>" + document.get("mensaje").toString() + "</td><td>" + document.get("fecha").toString() + "</td></tr>";
+            message += "<tr><td>" 
+            + document.get("mensaje").toString() 
+            + "<p>"
+            + "</td><td>" + document.get("fecha").toString() 
+            + "<p>"
+            + "</td></tr>";
         }
         //System.out.println(message);
         return message;
