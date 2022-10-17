@@ -164,7 +164,7 @@ y mediante la direccion podremos acceder al servicio desplegado mediante la pagi
 web
 
 ```
-
+ec2-54-158-83-252.compute-1.amazonaws.com
 ```
 
 La maquina estara apagada por efectos de costos.
